@@ -46,7 +46,22 @@ II. Steps for install mySql in docker
 
     4.Finally, change the server root password to protect your information:
         -$ mysql> ALTER USER 'root'@'localhost' IDENTIFIED BY '[newpassword]';
-    
+
+III. Steps to install MongoDb
+ 1.Install the current stable release of Docker Compose.
+        -$ sudo curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+
+ 2. Apply executable permissions for the downloaded binary.
+    -$ sudo chmod +x /usr/local/bin/docker-compose
+
+ 3.Verify the Docker Compose installation.
+    -$ docker-compose --version
+    -$ docker run -d -p 27017:27017 --name mongodb mongo:4.0.4
+
+    Setting up a MongoDB container
+    -$ sudo docker search mongodb
+    -$ tree mongodb 
+    -$ sudo docker-compose up -d
 
 
             
