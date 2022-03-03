@@ -38,7 +38,7 @@ II. Steps for install mySql in docker
         -$ docker ps
 
     3.Connect to the MySQL Docker Container
-        -$ apt-get install mysql-client
+        -$ sudo apt-get install mysql-client
         (Then, open the logs file for the MySQL container to find the generated root password:)
         -$ sudo docker logs mysql_docker (copy the generated password)
         -$ sudo docker -it mysql_docker bash
