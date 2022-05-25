@@ -29,11 +29,13 @@ I. Steps to install Docker
         -$ sudo docker run hello-world
 
 II. Steps for install mySql in docker 
+
    1.Pull the MySQL Docker Image
         -$ sudo docker pull mysql/mysql-server:latest
         -$ sudo docker images
 
     2.Deploy the MySQL Container
+     - sudo docker run -p 3306:3306 --env MYSQL_ROOT_PASSWORD=root --name local-mysql --mount source=mysql,target=/var/lib/mysql mysql:8.0.0
         -$ sudo docker run --name=mysql_docker -d mysql/mysql-server:latest
         -$ docker ps
 
